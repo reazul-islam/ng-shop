@@ -21,7 +21,7 @@ export class BlogService {
 
   }
     postDetail(id: number): Promise<Blog> {
-        return this.http.get(this.url + '/' + id + '/slug')
+        return this.http.get(this.url + '/blogs/' + id + '/slug')
             .toPromise()
             .then(response => response['data'])
             .catch(this.handleError);
@@ -33,7 +33,7 @@ export class BlogService {
             .catch(this.handleError);
     }
     categories(): Promise<BlogCategory[]> {
-        return this.http.get(this.url + '/blogCategories')
+        return this.http.get('http://localhost/lumen-jwt/public/api/blogCategories')
             .toPromise()
             .then(response => response)
             .catch(this.handleError);

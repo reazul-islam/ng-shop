@@ -12,7 +12,6 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailsComponent } from './components/blog/blog-details/blog-details.component';
 import {BlogService} from './services/blog.service';
 import {HttpClientModule} from '@angular/common/http';
-import { CategoryWiseBlogComponent } from './components/blog/category-wise-blog/category-wise-blog.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { CategoryWiseBlogComponent } from './components/blog/category-wise-blog/
     HomeComponent,
     ContactComponent,
     BlogComponent,
-    BlogDetailsComponent,
-    CategoryWiseBlogComponent
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
