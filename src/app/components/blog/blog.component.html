@@ -30,110 +30,20 @@
                 </span>
           </div>
           <!-- Post Content -->
-          <div class="post-content">
-            <h3 class="post-title"><a href="#">Brooklyn Beta was the most important <br>conference Everyone had been</a></h3>
+          <div class="post-content" *ngFor="let blog of blogs">
+            <h3 class="post-title"><a href="#">{{blog.title}}</a></h3>
             <div class="meta">
               <span class="meta-part"><a href="#"><i class="icon-user"></i> Admin</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-calendar"></i> Fabruary 25, 2015</a></span>
+              <span class="meta-part"><a href="#"><i class="icon-calendar"></i> {{blog.published_date}}</a></span>
               <span class="meta-part"><a href="#"><i class="icon-event"></i> Events</a></span>
               <span class="meta-part"><a href="#"><i class="icon-bubbles"></i> John Doe</a></span>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis possimus quo cum delectus itaque! Soluta id a laudantium error omnis totam suscipit doloremque quam nostrum provident minus consectetur, debitis! Itaque ipsam consequuntur minus aut iusto, in earum dolores adipisci quis rerum, cum animi voluptate provident deserunt assumenda sequi pariatur molestias commodi.</p>
+            <p>{{blog.description}}</p>
             <a class="btn btn-common btn-small" href="#">Continue Reading</a>
           </div>
           <!-- Post Content -->
         </div>
         <!-- End Post -->
-
-        <!-- Start Post -->
-        <div class="blog-post">
-          <!-- Post feature-inner -->
-          <div class="feature-inner">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/kpmTSQyET2A" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-          </div>
-          <!-- End Post feature-inner -->
-          <!-- Post format icon -->
-          <div class="post-format">
-                <span>
-                  <a href="#"><i class="icon-camrecorder"></i></a>
-                </span>
-          </div>
-          <!-- Post Content -->
-          <div class="post-content">
-            <h3 class="post-title"><a href="#">Brooklyn Beta was the most important <br>conference Everyone had been</a></h3>
-            <div class="meta">
-              <span class="meta-part"><a href="#"><i class="icon-user"></i> Admin</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-calendar"></i> Fabruary 25, 2015</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-event"></i> Events</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-bubbles"></i> John Doe</a></span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis possimus quo cum delectus itaque! Soluta id a laudantium error omnis totam suscipit doloremque quam nostrum provident minus consectetur, debitis! Itaque ipsam consequuntur minus aut iusto, in earum dolores adipisci quis rerum, cum animi voluptate provident deserunt assumenda sequi pariatur molestias commodi.</p>
-            <a class="btn btn-common btn-small" href="#">Continue Reading</a>
-          </div>
-          <!-- Post Content -->
-        </div>
-        <!-- End Post -->
-
-        <!-- Start Post -->
-        <div class="blog-post">
-          <!-- Post feature-inner -->
-          <div class="feature-inner">
-            <a class="lightbox" href="assets/img/blog/bloglarge-2.jpg"><img src="assets/img/blog/bloglarge-2.jpg" alt=""></a>
-          </div>
-          <!-- End Post feature-inner -->
-          <!-- Post format icon -->
-          <div class="post-format">
-                <span>
-                  <a href="#"><i class="icon-flag"></i></a>
-                </span>
-          </div>
-          <!-- Post Content -->
-          <div class="post-content">
-            <h3 class="post-title"><a href="#">Brooklyn Beta was the most important <br>conference Everyone had been</a></h3>
-            <div class="meta">
-              <span class="meta-part"><a href="#"><i class="icon-user"></i> Admin</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-calendar"></i> Fabruary 25, 2015</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-event"></i> Events</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-bubbles"></i> John Doe</a></span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis possimus quo cum delectus itaque! Soluta id a laudantium error omnis totam suscipit doloremque quam nostrum provident minus consectetur, debitis! Itaque ipsam consequuntur minus aut iusto, in earum dolores adipisci quis rerum, cum animi voluptate provident deserunt assumenda sequi pariatur molestias commodi.</p>
-            <a class="btn btn-common btn-small" href="#">Continue Reading</a>
-          </div>
-          <!-- Post Content -->
-        </div>
-        <!-- End Post -->
-
-        <!-- Start Post -->
-        <div class="blog-post">
-          <!-- Post feature-inner -->
-          <div class="feature-inner">
-            <a class="lightbox" href="assets/img/blog/bloglarge-3.jpg"><img src="assets/img/blog/bloglarge-3.jpg" alt=""></a>
-          </div>
-          <!-- End Post feature-inner -->
-          <!-- Post format icon -->
-          <div class="post-format">
-                <span>
-                  <a href="#"><i class="icon-microphone"></i></a>
-                </span>
-          </div>
-          <!-- Post Content -->
-          <div class="post-content">
-            <h3 class="post-title"><a href="#">Brooklyn Beta was the most important <br>conference Everyone had been</a></h3>
-            <div class="meta">
-              <span class="meta-part"><a href="#"><i class="icon-user"></i> Admin</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-calendar"></i> Fabruary 25, 2015</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-event"></i> Events</a></span>
-              <span class="meta-part"><a href="#"><i class="icon-bubbles"></i> John Doe</a></span>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facilis possimus quo cum delectus itaque! Soluta id a laudantium error omnis totam suscipit doloremque quam nostrum provident minus consectetur, debitis! Itaque ipsam consequuntur minus aut iusto, in earum dolores adipisci quis rerum, cum animi voluptate provident deserunt assumenda sequi pariatur molestias commodi.</p>
-            <a class="btn btn-common btn-small" href="#">Continue Reading</a>
-          </div>
-          <!-- Post Content -->
-        </div>
-        <!-- End Post -->
-
         <!-- Start Pagination -->
         <div id="pagination">
           <a class="page-num" href="#"><i class="icon-arrow-left-circle"></i></a>

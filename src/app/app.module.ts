@@ -10,6 +10,8 @@ import { appRoutes } from './app.routes';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailsComponent } from './components/blog/blog-details/blog-details.component';
+import {BlogService} from './services/blog.service';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { BlogDetailsComponent } from './components/blog/blog-details/blog-detail
   ],
   imports: [
     BrowserModule,
+      HttpClientModule,
       RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
