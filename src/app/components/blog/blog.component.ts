@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {BlogService} from '../../services/blog.service';
-
+import {ActivatedRoute, ParamMap} from "@angular/router";
+import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -8,11 +9,23 @@ import {BlogService} from '../../services/blog.service';
 })
 export class BlogComponent implements OnInit {
   public  blogs: any[];
-    constructor(private blogService: BlogService) { }
+  public  categories: any[];
+    constructor(private blogService: BlogService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.blogService.getAllPost().then( res => {
+
+      this.route.paramMap
+          .switchMap((params: ParamMap) => this.blogService.getAllPost(+params.get('id')))
+          .subscribe(respone => {
+              this.blogs = respone;
+              console.log(respone);
+          });
+    /*this.blogService.getAllPost().then( res => {
       this.blogs = res;
+        console.log(res);
+    });*/
+    this.blogService.categories().then( res => {
+      this.categories = res;
     });
   }
 

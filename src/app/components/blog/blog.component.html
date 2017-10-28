@@ -39,7 +39,7 @@
               <span class="meta-part"><a href="#"><i class="icon-bubbles"></i> John Doe</a></span>
             </div>
             <p>{{blog.description}}</p>
-            <a class="btn btn-common btn-small" href="#">Continue Reading</a>
+            <a class="btn btn-common btn-small" [routerLink]="['/blog', blog.id]">Continue Reading</a>
           </div>
           <!-- Post Content -->
         </div>
@@ -132,29 +132,9 @@
         <div class="widget widget-categories">
           <h5 class="widget-title">Categories</h5>
           <ul class="cat-list">
-            <li>
-              <a href="#">Life Style</a>
-              <span class="num-posts">09</span>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-              <span class="num-posts">15</span>
-            </li>
-            <li>
-              <a href="#">Fasion</a>
-              <span class="num-posts">21</span>
-            </li>
-            <li>
-              <a href="#">Sports</a>
-              <span class="num-posts">05</span>
-            </li>
-            <li>
-              <a href="#">Finance</a>
-              <span class="num-posts">29</span>
-            </li>
-            <li>
-              <a href="#">Political</a>
-              <span class="num-posts">17</span>
+            <li *ngFor="let data of categories">
+              <a [routerLink]="['/blog/category',data.id]">{{data.categoryName}}</a>
+              <span class="num-posts">{{data.count}}</span>
             </li>
           </ul>
         </div>
