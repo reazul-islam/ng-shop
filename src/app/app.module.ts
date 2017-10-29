@@ -12,6 +12,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogDetailsComponent } from './components/blog/blog-details/blog-details.component';
 import {BlogService} from './services/blog.service';
 import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
       HttpClientModule,
+      NgxPaginationModule,
       RouterModule.forRoot(appRoutes)
   ],
   providers: [BlogService],

@@ -10,7 +10,10 @@ import 'rxjs/add/operator/switchMap';
 export class BlogComponent implements OnInit {
   public  blogs: any[];
   public  categories: any[];
-    constructor(private blogService: BlogService, private route: ActivatedRoute) { }
+    p: number;
+    constructor(private blogService: BlogService, private route: ActivatedRoute) {
+        this.p = 1;
+    }
 
   ngOnInit() {
 
@@ -28,5 +31,8 @@ export class BlogComponent implements OnInit {
       this.categories = res;
     });
   }
+    pageChanged($event) {
+
+    }
 
 }

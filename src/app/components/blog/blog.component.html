@@ -30,7 +30,7 @@
                 </span>
           </div>
           <!-- Post Content -->
-          <div class="post-content" *ngFor="let blog of blogs">
+          <div class="post-content" *ngFor="let blog of blogs | paginate: { itemsPerPage: 3, currentPage: p }">
             <h3 class="post-title"><a href="#">{{blog.title}}</a></h3>
             <div class="meta">
               <span class="meta-part"><a href="#"><i class="icon-user"></i> Admin</a></span>
@@ -41,17 +41,22 @@
             <p>{{blog.description}}</p>
             <a class="btn btn-common btn-small" [routerLink]="['/blog', blog.id]">Continue Reading</a>
           </div>
+
           <!-- Post Content -->
         </div>
         <!-- End Post -->
         <!-- Start Pagination -->
-        <div id="pagination">
-          <a class="page-num" href="#"><i class="icon-arrow-left-circle"></i></a>
-          <a class="current page-num" href="#">1</a>
-          <a class="page-num" href="#">2</a>
-          <a class="page-num" href="#">3</a>
-          <a class="next-page" href="#"><i class="icon-arrow-right-circle"></i></a>
-        </div>
+          <pagination-controls class="pagination"
+                                (pageChange)="p = $event"
+                                maxSize="20"
+                                directionLinks="true"
+                                autoHide="true"
+                                previousLabel="Previous"
+                                nextLabel="Next"
+                                screenReaderPaginationLabel="Pagination"
+                                screenReaderPageLabel="page"
+                                screenReaderCurrentLabel="You're on page">
+          </pagination-controls>
         <!-- End Pagination -->
       </div>
       <!-- End Blog Posts -->
